@@ -129,8 +129,91 @@ A Dockerfile is written in the project directory which would contain the instruc
 
 The NodeJS project is downloaded from the provided location by typing the below commands. 
 
-git clone https://github.com/0xcf/decal-sp18-a10
+git clone https://github.com/0xcf/decal-sp18-a10 by dowloading it in to our computer.
 
-`cd decal-sp18-a10`
+And create a file Docker and insert this content there.
 
+```
+FROM node:10-alpine
+ RUN mkdir-p /app/node_modules && \
+ chown-R node:node /app
+ WORKDIR /app
+ COPY package*.json .
+ USER node
+ RUN npm install && \
+ npm install nodemon
+ COPY--chown=node:node . .
+ EXPOSE 8080
+ CMD ["node", "server.js"]
+```
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/7b1f98ff-2baf-4409-b494-e7930f63ab7f)
+
+create a file Docker and insert this content there.
+
+```
+version: '3'
+services:
+  web:
+    build:
+      context: decal-sp18-a10
+      dockerfile: Dockerfile
+    container_name: web
+    restart: unless-stopped
+    ports:
+      - "80:8080"
+    command: ./wait-for database:27017 -- /app/node_modules/.bin/nodemon server.js
+  database:
+    image: mongo:latest
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+
+```
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/ab4898fd-450e-40d1-abd7-8192575dd8e3)
+
+After creating the docker-compose.yml, both containers are built, started and ran interactively using the below command.
+
+```
+docker-compose up
+```
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/a2405048-a148-43fb-936e-d3af42319fa0)
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/41d6f20c-ec72-4f78-8f7b-9e2695980b7b)
+
+We open browser at http://localhost:80.
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/d7ed9895-5541-4c90-8d26-79acc68efd8e)
+
+## For the following task 1, 2, 3 refer link 3
+
+The interactive on-screen instructions are followed as shown in below screenshots.
+
+### Task 1: Run some simple Docker containers
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/56da0e28-bc12-4cba-85bb-00addedb6f5b)
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/c69c409b-db68-4b10-b797-45aba729bbe3)
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/ac986b8f-70f0-40c8-bb8b-963a1851ddeb)
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/bd1687a3-18fc-4ebe-875e-d23510dcc325)
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/6cc6ff28-f41f-425c-b19c-a714003a5bcb)
+
+## Task 2: Package and run a custom app using Docker
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/82a2dede-5544-49bf-8865-a39b06be0af3)
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/d4df8c0c-f739-453b-b5a3-22d795c8b735)
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/28f0fb86-28d1-4676-bd03-64438a2f8037)
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/aa7b7b3a-2481-4f8f-8297-8688e415a154)
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/dd1a4976-7c1b-4b04-9a7f-6afa4a59cd0f)
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/0683eddf-aa1a-420d-81cb-39e180fef85e)
 
