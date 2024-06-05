@@ -217,3 +217,49 @@ The interactive on-screen instructions are followed as shown in below screenshot
 
 ![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/0683eddf-aa1a-420d-81cb-39e180fef85e)
 
+
+# Installation Kubernates
+
+Download the latest 1.30 patch release: kubectl 1.30.0.
+
+Or if you have curl installed, use this command:
+
+```
+curl.exe -LO "https://dl.k8s.io/release/v1.30.0/bin/windows/amd64/kubectl.exe"
+```
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/20df5675-d36c-45ac-a218-b419e32d34d8)
+
+```
+curl.exe -LO "https://dl.k8s.io/v1.30.0/bin/windows/amd64/kubectl.exe.sha256"
+```
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/6bacb4f6-8fac-4399-a378-43ab64d322cf)
+
+```
+CertUtil -hashfile kubectl.exe SHA256
+```
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/930c3c7a-cb61-4559-adad-f1577171cc47)
+
+ ```
+type kubectl.exe.sha256
+```
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/725e5b03-b50d-4ff0-a2d1-14abec46c01f)
+
+Test to ensure the version of kubectl is the same as downloaded:
+
+```
+kubectl version --client
+```
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/f0716251-13e8-4e69-9101-9867d77aa5cf)
+
+```
+ kubectl version --client --output=yaml
+```
+
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/2f946996-7715-4da4-ad6a-9be9d4797bd9)
+
+
