@@ -265,3 +265,32 @@ kubectl version --client
 ![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/2f946996-7715-4da4-ad6a-9be9d4797bd9)
 
 
+![image](https://github.com/ananthan05/Secure-Systems-Engineering/assets/140697378/e4dab0b5-4453-4e56-ad2f-bce7ec0dc695)
+
+Installing Minicube 
+
+![image](https://github.com/jayshah17/Secure-System-Engineering-/assets/76842630/757de741-9169-45c3-8e84-1df2630c5b96)
+
+
+starting at its file location 
+
+> minicube.exe start
+
+![image](https://github.com/jayshah17/Secure-System-Engineering-/assets/76842630/684b8c5c-495a-4672-94bc-1d0e3331dd88)
+
+![image](https://github.com/jayshah17/Secure-System-Engineering-/assets/76842630/e2060e3c-682f-4884-8442-7522f815b8b2)
+
+
+![image](https://github.com/jayshah17/Secure-System-Engineering-/assets/76842630/461ef119-7425-43c1-975e-639b629acade)
+
+![image](https://github.com/jayshah17/Secure-System-Engineering-/assets/76842630/bc3e5e22-7fdc-4003-86f6-4ba9f525c289)
+
+![image](https://github.com/jayshah17/Secure-System-Engineering-/assets/76842630/a03271d2-3372-4f6d-a248-69591baeb03d)
+
+![image](https://github.com/jayshah17/Secure-System-Engineering-/assets/76842630/95e67e43-4ac9-4edf-8aa9-63eeda4b86a0)
+
+![image](https://github.com/jayshah17/Secure-System-Engineering-/assets/76842630/7244a465-89c1-49ea-8612-5a8242145527)
+
+![image](https://github.com/jayshah17/Secure-System-Engineering-/assets/76842630/42962c95-772c-422a-b31a-d27165408474)
+
+![image](https://github.com/jayshah17/Secure-System-Engineering-/assets/76842630/e406cff4-72f9-4c54-a185-179c2400d946)
